@@ -1,0 +1,191 @@
+* {
+    box-sizing: border-box;
+
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(244, 244, 244);
+    height: 100vh;
+
+    display: grid;
+    grid-template-columns: 72px 150px 1fr;
+}
+
+li {
+    list-style: none;
+}
+
+/* SERVER LIST SECTION */
+nav {
+    background-color: lightgrey;
+}
+
+ul.server-list {
+    padding: 5px;
+
+    display: grid;
+    justify-content: center;
+    grid-gap: 5px;
+}
+
+ul.server-list li {
+    width: 54px;
+    height: 54px;
+
+    border: dotted 2px blue;
+    border-radius: 100%;
+}
+
+/* SERVER SECTION */
+.server-room {
+    background-color: rgb(221, 221, 221);
+
+    display: grid;
+    grid-template-rows: 48px 100px auto 48px;
+    grid-gap: 4px;
+
+    padding: 5px;
+    overflow: hidden;
+}
+
+.server-room > * {
+    border: dotted 2px blue;
+}
+.channels {
+    display: grid;
+    grid-template-rows: repeat(5, auto) 1fr;
+    grid-gap: 4px;
+
+    padding: 2px;
+    overflow: auto;
+}
+
+.channels ul,
+.controls > * {
+    padding: 5px;
+    border: dotted 2px green;
+}
+.channels li {
+    height: 20px;
+    border: dotted 2px red;
+}
+
+.controls {
+    background-color: rgb(215, 214, 214);
+    padding: 5px;
+
+    display: grid;
+    grid-template-columns: 24px 1fr 16px 16px 16px;
+    grid-gap: 4px;
+
+    align-items: center;
+}
+
+.avatar {
+    height: 24px;
+}
+
+.username {
+    height: 32px;
+}
+
+.mute,
+.deafen,
+.settings {
+    height: 16px;
+}
+
+.avatar,
+.mute,
+.deafen,
+.settings {
+    border-radius: 100%;
+}
+
+/* MAIN SECTION */
+main > * {
+    border: dotted 2px blue;
+}
+
+main {
+    display: grid;
+    grid-template-rows: 48px 1fr 48px;
+    
+    grid-gap: 4px;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+header,
+.type-msg {
+    background-color: rgb(233, 233, 233);
+}
+
+header {
+    display: grid;
+    grid-auto-columns: auto;
+    grid-auto-flow: column;
+
+    align-items: center;
+    padding: 5px;
+}
+
+.channel-name {
+    min-width: 200px;
+    height: 32px;
+
+    display: grid;
+    justify-self: left;
+
+    border: dotted 2px green;
+}
+
+.tools {
+    display: grid;
+    justify-self: right;
+    grid-auto-flow: column;
+
+    padding: 2px;
+    grid-gap: 5px;
+    border: dotted 2px green;
+}
+
+.tools > * {
+    border: dotted 2px red;
+}
+
+.bell,
+.pinned,
+.member-list,
+.inbox,
+.help {
+    width: 28px;
+    height: 28px;
+}
+
+.search {
+    width: 80px;
+    height: 28px;
+}
+
+.type-msg {
+    border-radius: 20px;
+
+    display: grid;
+    grid-template-columns: 36px 1fr 36px 36px 36px;
+    grid-gap: 5px;
+    
+    padding: 4px;
+}
+
+.type-msg > * {
+    border: dotted 2px green;
+    border-radius: 100%;
+}
+
+.type {
+    border-radius: 5px;
+    padding: 8px;
+}
